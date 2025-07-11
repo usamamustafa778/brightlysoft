@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function Brands({ isLoaded, brandMockups }) {
   const containerRef = useRef(null);
@@ -135,7 +136,7 @@ export default function Brands({ isLoaded, brandMockups }) {
                   }`}
                 >
                   <div className="phone-frame">
-                    <img
+                    <Image
                       src={mockupUrl}
                       alt={`Brand mockup ${index + 1}`}
                       className="phone-content"

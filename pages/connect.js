@@ -11,7 +11,7 @@ import { BrandCard1, BrandCard2, BrandCard3 } from '@/components/ui/BrandCard';
 import Button from '@/components/ui/Button';
 import ContactForm from '@/components/ContactForm';
 
-export default function connect() {
+export default function Connect() {
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 

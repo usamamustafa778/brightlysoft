@@ -32,11 +32,11 @@ export default function Control({ isLoaded }) {
             You deserve to be in control of the content you consume.
           </h3>
           <p className="text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
-            That's becoming more challenging, however. The growing demand
+            That&apos;s becoming more challenging, however. The growing demand
             for your attention has pushed many platforms away from serving
-            your best interests. It's time to take back control. That's why
+            your best interests. It&apos;s time to take back control. That&apos;s why
             we chose to start from a place where you can still decide what
-            you want and don't want to engage with: the inbox. From there,
+            you want and don&apos;t want to engage with: the inbox. From there,
             our brands usher readers into rich web experiences.
           </p>
         </div>

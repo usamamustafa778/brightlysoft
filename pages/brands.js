@@ -174,7 +174,7 @@ export default function Brand() {
                                     <h3 className="text-3xl md:text-5xl font-semibold mb-4">Interested in reaching our audience?</h3>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl md:text-2xl font-semibold mb-4">Whether you're looking to advertise or you have a publication that could fit our portfolio, we'd love to hear from you.</h3>
+                                    <h3 className="text-xl md:text-2xl font-semibold mb-4">Whether you&apos;re looking to advertise or you have a publication that could fit our portfolio, we&apos;d love to hear from you.</h3>
                                <Button
                                 href="/connect"
                                 text="Connect with us"

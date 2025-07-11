@@ -95,7 +95,7 @@ export default function Audience() {
                     className="space-bg space-bg-0 absolute object-cover"
                     style={{
                         transform: `translate3d(0px, ${-scrollY * 0.25}px, 0px) scale3d(1.01, 1.01, 1)`,
-                        transformStyle: 'preserve-3d',
+                        transformSyle: 'preserve-3d',
                     }}
                 />
                 <img
@@ -162,7 +162,7 @@ export default function Audience() {
                                 <h2 className="text-4xl font-bold">
                                     Our subscribers inform the brands we launch and content we create.
                                 </h2>
-                                <p className="text-lg">We place great value in our audience's behavior — what content they engage with and how they engage with it — and use those insights to build brands and craft stories we know they will love. </p>
+                                <p className="text-lg">We place great value in our audience&apos;s behavior — what content they engage with and how they engage with it — and use those insights to build brands and craft stories we know they will love. </p>
                             </div>
                             <div className="min-h-[600px] relative">
                                 {subscriberInfo.map((info, index) => (
@@ -187,7 +187,7 @@ export default function Audience() {
                                 The Makeup of Our Audience
                             </h2>
                             <p className="text-lg text-center max-w-2xl">
-                                In addition to learning from our subscribers' engagement, we survey and interview our audience regularly to better understand who they are and what motivates them.
+                                In addition to learning from our subscribers&apos; engagement, we survey and interview our audience regularly to better understand who they are and what motivates them.
                             </p>
                         </div>
                     </div>

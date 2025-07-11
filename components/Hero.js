@@ -67,7 +67,7 @@ export default function Hero({ isLoaded }) {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          We're Brightly Soft, an inbox-first media company that serves
+          We&apos;re Brightly Soft, an inbox-first media company that serves
           inspiring content to{" "}
           <span className="text-white font-medium">millions of readers</span>{" "}
           every day.

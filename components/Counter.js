@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Counter({ isLoaded }) {
   const [emailCount, setEmailCount] = useState(53564277257);
@@ -89,14 +90,14 @@ export default function Counter({ isLoaded }) {
             <div className="flex flex-col justify-between h-full">
               <p className="text-sm sm:text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8">
                 Millions of subscribers start their day with Optimism. That
-                matters to us, which is why we're committed to keeping our
+                matters to us, which is why we&apos;re committed to keeping our
                 content free and accessible, and because of this a growing
                 community relies on our brands to stay more informed,
                 entertained, and inspired.
               </p>
 
               <div className="flex justify-start lg:justify-end">
-                <a
+                <Link
                   href="/audience"
                   className="group inline-flex items-center border border-gray-600 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white hover:border-white transition-all duration-300 hover:bg-white/5"
                 >
@@ -116,7 +117,7 @@ export default function Counter({ isLoaded }) {
                       />
                     </svg>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
