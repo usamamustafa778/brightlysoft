@@ -22,7 +22,7 @@ export default function Control({ isLoaded }) {
 
   return (
     <section
-      className={`py-32 px-4 sm:px-6 lg:px-8 transition-all duration-1200 ease-out delay-1100 ${
+      className={`py-32 px-6  lg:px-8 transition-all duration-1200 ease-out delay-1100 ${
         isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >

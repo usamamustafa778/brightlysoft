@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
@@ -6,12 +7,16 @@ import Brands from "../components/Brands";
 import Counter from "../components/Counter";
 import Control from "../components/Control";
 import BrandsGridSection from "../components/BrandsGridSection";
+import Link from "next/link";
 
+import { useRouter } from "next/router";
+import Button from "@/components/ui/Button";
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentBrandSlide, setCurrentBrandSlide] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // Trigger fade-in animation after component mounts
@@ -111,9 +116,8 @@ export default function Home() {
 
       {/* Star field background layers */}
       <div
-        className={`space-backgrounds fixed top-0 left-0 w-full h-full pointer-events-none z-0 transition-opacity duration-2000 ease-out ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={`space-backgrounds fixed top-0 left-0 w-full h-full pointer-events-none z-0 transition-opacity duration-2000 ease-out ${isLoaded ? "opacity-100" : "opacity-0"
+          }`}
       >
         <div
           className="absolute inset-0"
@@ -126,9 +130,8 @@ export default function Home() {
           alt=""
           className="space-bg space-bg-0 absolute object-cover"
           style={{
-            transform: `translate3d(0px, ${
-              -scrollY * 0.25
-            }px, 0px) scale3d(1.01, 1.01, 1)`,
+            transform: `translate3d(0px, ${-scrollY * 0.25
+              }px, 0px) scale3d(1.01, 1.01, 1)`,
             transformStyle: "preserve-3d",
           }}
         />
@@ -137,9 +140,8 @@ export default function Home() {
           alt=""
           className="space-bg space-bg-1 absolute object-cover"
           style={{
-            transform: `translate3d(0px, ${
-              -scrollY * 0.15
-            }px, 0px) scale3d(1.01, 1.01, 1)`,
+            transform: `translate3d(0px, ${-scrollY * 0.15
+              }px, 0px) scale3d(1.01, 1.01, 1)`,
             transformStyle: "preserve-3d",
           }}
         />
@@ -148,46 +150,42 @@ export default function Home() {
           alt=""
           className="space-bg space-bg-2 absolute object-cover"
           style={{
-            transform: `translate3d(0px, ${
-              -scrollY * 0.1
-            }px, 0px) scale3d(1.01, 1.01, 1)`,
+            transform: `translate3d(0px, ${-scrollY * 0.1
+              }px, 0px) scale3d(1.01, 1.01, 1)`,
             transformStyle: "preserve-3d",
           }}
         />
       </div>
 
-      {/* Main content */}
       <div
-        className={`relative z-10 text-white transition-all duration-1000 ease-out ${
-          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-      >
-        {/* Navigation */}
-        <div
-          className={`transition-all duration-1200 ease-out delay-200 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        className={`transition-all max-w-7xl mx-auto py-4 md:px-16 duration-1200 ease-out delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
+      >
+
+        <div
+          className={`transition-all duration-1200 ease-out delay-200 px-2 md:px-0 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+            }`}
         >
           <Navbar />
         </div>
+
+
         <Hero isLoaded={isLoaded} />
         <Brands isLoaded={isLoaded} brandMockups={brandMockups} />
         <Counter isLoaded={isLoaded} />
-
         <Control isLoaded={isLoaded} />
 
         {/* Newsletter Slider Section */}
         <section
-          className={`py-32 px-4 sm:px-6 lg:px-8 transition-all duration-1200 ease-out delay-1300 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`py-32 px-6 lg:px-8 transition-all duration-1200 ease-out delay-1300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto ">
             <h3 className="text-3xl sm:text-4xl font-bold text-white text-center mb-20">
               Opt-In to Brightly Soft
             </h3>
 
-            <div className="relative">
+            <div className="relative border py-5 rounded-3xl bg-gray-900">
               <div className="overflow-hidden">
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
@@ -275,7 +273,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Slider Controls */}
               <div className="flex justify-center mt-12 space-x-4">
                 <button
                   onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
@@ -319,17 +316,15 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Slider Dots */}
               <div className="flex justify-center mt-6 space-x-2">
                 {newsletters.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`h-px transition-all duration-300 ${
-                      index === currentSlide
-                        ? "bg-white w-12"
-                        : "bg-white/30 w-8"
-                    }`}
+                    className={`h-px transition-all duration-300 ${index === currentSlide
+                      ? "bg-white w-12"
+                      : "bg-white/30 w-8"
+                      }`}
                   />
                 ))}
               </div>
@@ -342,9 +337,8 @@ export default function Home() {
 
         {/* Powered By Section */}
         <section
-          className={`py-32 px-4 sm:px-6 lg:px-8 transition-all duration-1200 ease-out delay-1700 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`py-32 px-6 lg:px-8 transition-all duration-1200 ease-out delay-1700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
@@ -379,7 +373,7 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="py-8 border-b border-white/10 last:border-b-0"
+                  className="py-8 bg-gray-900 px-6 rounded-3xl border-white/10 last:border-b-0"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     <h5 className="text-2xl font-bold text-white leading-tight">
@@ -389,20 +383,7 @@ export default function Home() {
                       <p className="text-white/70 text-base leading-relaxed mb-8">
                         {item.description}
                       </p>
-                      <button className="inline-flex items-center text-white hover:text-white/70 transition-colors group">
-                        <span className="mr-3">{item.buttonText}</span>
-                        <svg
-                          className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
+                      <Button text={item.buttonText} href={item.title.toLowerCase()} />
                     </div>
                   </div>
                 </div>
@@ -413,40 +394,82 @@ export default function Home() {
 
         {/* Footer */}
         <footer
-          className={`py-16 px-4 sm:px-6 lg:px-8 border-t border-white/10 transition-all duration-1000 ease-out delay-1900 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`pt-16 px-6  lg:px-8 border-t border-white/10 transition-all duration-1000 ease-out delay-1900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="max-w-7xl py-8 lg:py-16 mx-auto">
+            {/* Large screen layout - single column */}
+            <div className="hidden lg:flex flex-col items-start">
+              <div className="flex items-center gap-16 mt-8">
+                <Link href="/audience" className="flex flex-col items-center group ">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/audience' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Audience</span>
+                </Link>
+                <Link href="/brands" className="flex flex-col items-center group">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/brands' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Brands</span>
+                </Link>
+                <Link href="/connect" className="flex flex-col items-center group">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/connect' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Connect</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Small screen layout - two columns */}
+            <div className="lg:hidden grid grid-cols-2 gap-8 border">
+              {/* Left column - Links */}
+              <div className="flex flex-col items-start space-y-4">
+                <Link href="/audience" className="flex flex-col items-center group">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/audience' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Audience</span>
+                </Link>
+                <Link href="/brands" className="flex flex-col items-center group">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/brands' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Brands</span>
+                </Link>
+                <Link href="/connect" className="flex flex-col items-center group">
+                  <span className={`  block w-8 h-1 bg-white rounded-full mb-2 group-hover:bg-yellow-400 transition ${router.pathname === '/connect' ? 'bg-yellow-400' : 'hidden'}`}></span>
+                  <span className="text-xl font-medium text-white group-hover:text-yellow-400 transition">Connect</span>
+                </Link>
+              </div>
+
+              {/* Right column - Other elements */}
+              <div className="flex flex-col items-start space-y-4">
+                <div className="text-xl font-medium text-white">
+                  Brightly Soft
+                </div>
+                <div className="text-white/50 text-sm">
+                  © 2025 Brightly Soft
+                </div>
+                <div className="flex flex-col items-end space-y-2">
+                  <a
+                    href="#"
+                    className="text-white/50 hover:text-white text-sm transition-colors"
+                  >
+                    User Agreement
+                  </a>
+                  <a
+                    href="#"
+                    className="text-white/50 hover:text-white text-sm transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Large screen bottom section */}
+          <div className="hidden lg:block max-w-7xl mx-auto py-8 lg:py-32">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
               <div>
                 <div className="text-xl font-medium text-white mb-4">
                   Brightly Soft
                 </div>
               </div>
-              <div>
-                <div className="flex space-x-8">
-                  <a
-                    href="#brands"
-                    className="text-white hover:text-white/70 text-base font-medium transition-colors"
-                  >
-                    Brands
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white hover:text-white/70 text-base font-medium transition-colors"
-                  >
-                    About
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white hover:text-white/70 text-base font-medium transition-colors"
-                  >
-                    Connect
-                  </a>
-                </div>
-              </div>
-              <div className="md:col-span-2">
+
+              <div className="md:col-span-2 ">
                 <div className="flex flex-col md:flex-row md:justify-end items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
                   <div className="text-white/50 text-sm">
                     © 2025 Brightly Soft

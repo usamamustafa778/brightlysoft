@@ -1,8 +1,8 @@
 export default function Hero({ isLoaded }) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden">
+    <section className="relative  min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-0 md:pt-20  overflow-hidden">
       {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none ">
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -29,7 +29,7 @@ export default function Hero({ isLoaded }) {
       >
         {/* Badge */}
         <div
-          className={`inline-flex items-center px-4 py-2 mb-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-white/80 transition-all duration-1000 delay-700 ${
+          className={`inline-flex items-center px-4 py-2  mb-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-white/80 transition-all duration-1000 delay-700 ${
             isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
@@ -40,7 +40,7 @@ export default function Hero({ isLoaded }) {
         {/* Main Heading with Gradient */}
         <h1 className="relative">
           <span
-            className={`block text-6xl sm:text-7xl md:text-8xl font-bold mb-4 leading-tight transition-all duration-1200 delay-800 ${
+            className={`block text-[45px] sm:text-7xl md:text-[90px] py-5 font-bold mb-4 leading-tight transition-all duration-1200 delay-800 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >

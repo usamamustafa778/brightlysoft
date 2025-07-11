@@ -13,9 +13,9 @@ export default function Counter({ isLoaded }) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-20">
+    <div className="flex flex-col items-center justify-center md:mt-16 px-6 lg:mt-20">
       <section
-        className={`relative py-24 px-4 sm:px-6 lg:px-20 overflow-hidden transition-all duration-120 bg-[#141414] rounded-4xl max-w-6xl mx-auto ease-out delay-900 ${
+        className={`relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-20 overflow-hidden transition-all duration-120 bg-[#141414] rounded-2xl sm:rounded-3xl lg:rounded-4xl max-w-6xl mx-auto ease-out delay-900 ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -34,7 +34,7 @@ export default function Counter({ isLoaded }) {
                 }}
               >
                 <div
-                  className="absolute left-1/2 top-1/2 w-96 h-96 border border-gray-600/20 rounded-full"
+                  className="absolute left-1/2 top-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border border-gray-600/20 rounded-full"
                   style={{
                     transform: "translate(-50%, -50%)",
                     clipPath: `polygon(50% 50%, 50% 0%, ${
@@ -43,7 +43,7 @@ export default function Counter({ isLoaded }) {
                   }}
                 />
                 <div
-                  className="absolute left-1/2 top-1/2 w-80 h-80 border border-gray-600/15 rounded-full"
+                  className="absolute left-1/2 top-1/2 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 border border-gray-600/15 rounded-full"
                   style={{
                     transform: "translate(-50%, -50%)",
                     clipPath: `polygon(50% 50%, 50% 0%, ${
@@ -52,7 +52,7 @@ export default function Counter({ isLoaded }) {
                   }}
                 />
                 <div
-                  className="absolute left-1/2 top-1/2 w-64 h-64 border border-gray-600/25 rounded-full"
+                  className="absolute left-1/2 top-1/2 w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 border border-gray-600/25 rounded-full"
                   style={{
                     transform: "translate(-50%, -50%)",
                     clipPath: `polygon(50% 50%, 50% 0%, ${
@@ -67,27 +67,27 @@ export default function Counter({ isLoaded }) {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Email Counter */}
-          <div className="email-counter text-center mb-24">
+          <div className="email-counter text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             <div className="rem-calibrator">
-              <h3 className="text-7xl sm:text-8xl font-bold text-white mb-6 leading-none tracking-tight">
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 leading-none tracking-tight">
                 {Math.round(emailCount).toLocaleString()}
               </h3>
             </div>
-            <div className="text-xl sm:text-2xl text-gray-400 font-light">
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light px-4">
               Emails opened and counting*
             </div>
           </div>
 
           {/* Header Side by Side Container */}
-          <div className="header-side-by-side-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="header-side-by-side-container grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-start">
             {/* Left Column - Title */}
-            <h4 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Trusted by millions of Americans.
             </h4>
 
             {/* Right Column - Content */}
             <div className="flex flex-col justify-between h-full">
-              <p className="text-base lg:text-lg text-gray-300 leading-relaxed mb-8">
+              <p className="text-sm sm:text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8">
                 Millions of subscribers start their day with Optimism. That
                 matters to us, which is why we're committed to keeping our
                 content free and accessible, and because of this a growing
@@ -95,17 +95,17 @@ export default function Counter({ isLoaded }) {
                 entertained, and inspired.
               </p>
 
-              <div className="flex justify-end">
+              <div className="flex justify-start lg:justify-end">
                 <a
                   href="/audience"
-                  className="group inline-flex items-center border border-gray-600 rounded-full px-6 py-3 text-white hover:border-white transition-all duration-300 hover:bg-white/5"
+                  className="group inline-flex items-center border border-gray-600 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white hover:border-white transition-all duration-300 hover:bg-white/5"
                 >
-                  <div className="text-xs font-medium tracking-[0.2em] uppercase mr-3">
+                  <div className="text-xs font-medium tracking-[0.2em] uppercase mr-2 sm:mr-3">
                     Learn More
                   </div>
-                  <div className="w-6 h-6 rounded-full border border-gray-600 group-hover:border-white flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-gray-600 group-hover:border-white flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
                     <svg
-                      className="w-3 h-3"
+                      className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -122,8 +122,8 @@ export default function Counter({ isLoaded }) {
           </div>
 
           {/* Source Text */}
-          <div className="mt-20 text-left">
-            <div className="text-sm text-gray-500 font-light">
+          <div className="mt-12 sm:mt-16 md:mt-20 text-left">
+            <div className="text-xs sm:text-sm text-gray-500 font-light">
               *Source: SparkPost 2025
             </div>
           </div>

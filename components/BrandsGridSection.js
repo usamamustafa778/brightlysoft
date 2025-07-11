@@ -22,7 +22,7 @@ const BrandsGridSection = ({ isLoaded }) => {
 
   return (
     <section
-      className={`py-32 px-4 sm:px-6 lg:px-8 transition-all duration-1200 ease-out delay-1500 ${
+      className={`py-32 px-6 lg:px-8 transition-all duration-1200 ease-out delay-1500 ${
         isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >

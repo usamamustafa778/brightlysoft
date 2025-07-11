@@ -93,7 +93,7 @@ export default function Brands({ isLoaded, brandMockups }) {
       {/* Brands */}
       <div
         id="brands"
-        className={`relative py-20 transition-all duration-1000 ease-out delay-700 mb-40 ${
+        className={`relative py-20 transition-all duration-1000 ease-out delay-700 mb-40  overflow-hidden lg:overflow-visible ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
