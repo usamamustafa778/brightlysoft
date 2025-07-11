@@ -139,6 +139,8 @@ export default function Brands({ isLoaded, brandMockups }) {
                     <Image
                       src={mockupUrl}
                       alt={`Brand mockup ${index + 1}`}
+                      width={240}
+                      height={520}
                       className="phone-content"
                       loading="lazy"
                     />

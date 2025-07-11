@@ -67,6 +67,8 @@ export default function Connect() {
         <img
           src="https://cdn.prod.website-files.com/6426f39707cfcc0b1a306213/645d4f68595f996980f00302_Texture_high_res_final_stars-0.webp"
           alt=""
+          width={1920}
+          height={1080}
           className="space-bg space-bg-0 absolute object-cover"
           style={{
             transform: `translate3d(0px, ${-scrollY * 0.25}px, 0px) scale3d(1.01, 1.01, 1)`,
@@ -76,6 +78,8 @@ export default function Connect() {
         <img
           src="https://cdn.prod.website-files.com/6426f39707cfcc0b1a306213/645d4f681ab20a0fc4d8d929_Texture_high_res_final_stars-1.webp"
           alt=""
+          width={1920}
+          height={1080}
           className="space-bg space-bg-1 absolute object-cover"
           style={{
             transform: `translate3d(0px, ${-scrollY * 0.15}px, 0px) scale3d(1.01, 1.01, 1)`,
@@ -85,6 +89,8 @@ export default function Connect() {
         <img
           src="https://cdn.prod.website-files.com/6426f39707cfcc0b1a306213/645d4f681ab20a0fc4d8d929_Texture_high_res_final_stars-1.webp"
           alt=""
+          width={1920}
+          height={1080}
           className="space-bg space-bg-2 absolute object-cover"
           style={{
             transform: `translate3d(0px, ${-scrollY * 0.1}px, 0px) scale3d(1.01, 1.01, 1)`,
@@ -187,9 +193,9 @@ export default function Connect() {
 
                             {/* Right column - Other elements */}
                             <div className="flex flex-col items-start space-y-4">
-                                <div className="text-xl font-medium text-white">
+                                <Link href="/" className="text-xl font-medium text-white">
                                     Brightly Soft
-                                </div>
+                                </Link>
                                 <div className="text-white/50 text-sm">
                                     © 2025 Brightly Soft
                                 </div>
@@ -215,9 +221,9 @@ export default function Connect() {
                     <div className="hidden lg:block max-w-7xl mx-auto py-8 lg:py-32">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                             <div>
-                                <div className="text-xl font-medium text-white mb-4">
+                                <Link href="/" className="text-xl font-medium text-white mb-4">
                                     Brightly Soft
-                                </div>
+                                </Link>
                             </div>
 
                             <div className="md:col-span-2 ">
